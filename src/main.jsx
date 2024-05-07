@@ -7,6 +7,7 @@ import Token from "./Token.jsx";
 import Pricing from "./Pricing.jsx";
 import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
+import Dashboard from "./Dashboard.jsx";
 import {
   createBrowserRouter,
   Route,
@@ -18,6 +19,7 @@ const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<App />} />
+      <Route path="/profile" element={<Dashboard />} />
       <Route path="/token" element={<Token />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/signup" element={<Signup />} />

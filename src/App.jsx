@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
 import Price from "./components/Price";
 import Member from "./components/Member";
 
