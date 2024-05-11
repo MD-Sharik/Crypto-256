@@ -26,7 +26,14 @@ function Header() {
       return (
         <div className="bg-black h-20 flex justify-between items-center px-12 ">
           <div>
-            <img src="/256 Crypto/LOGO.svg" alt="logo" width="60" height="60" />
+            <Link to={"/"}>
+              <img
+                src="/256 Crypto/LOGO.svg"
+                alt="logo"
+                width="60"
+                height="60"
+              />
+            </Link>
           </div>
           <div className="text-white">Dashboard</div>
           <div>
@@ -43,7 +50,7 @@ function Header() {
       return (
         <div
           className={`flex gap-5 w-full px-20 fixed z-50 justify-between backdrop-blur-sm items-center max-w-full text-white max-md:flex-wrap ${
-            scrolled ? "bg-black" : ""
+            scrolled ? "bg-black/95" : ""
           }`}
           style={{
             transition: "background-color 0.3s ease",
@@ -64,11 +71,18 @@ function Header() {
               Contact Us
             </div>
           </div>
-          <Link to={"/signup"}>
-            <button className="hidden md:flex justify-center px-8 py-4 bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
-              Get Started
-            </button>
-          </Link>
+          <div className="flex  gap-5">
+            <Link to={"/login"}>
+              <button className="hidden md:flex justify-center px-8 py-4 bg-transparent border border-transparent border-solid transition-all hover:border-white hover:bg-white/5 cursor-pointer rounded-[30px] max-md:px-5">
+                Login
+              </button>
+            </Link>
+            <Link to={"/signup"}>
+              <button className="hidden md:flex justify-center px-8 py-4 bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
+                Get Started
+              </button>
+            </Link>
+          </div>
         </div>
       );
     }
@@ -78,33 +92,3 @@ function Header() {
 }
 
 export default Header;
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// function Header() {
-//   return (
-//     <div className="flex gap-5 w-full px-20 fixed z-50 justify-between backdrop-blur-sm items-center max-w-full text-white max-md:flex-wrap">
-//       <img src="public\256 Crypto\LOGO.svg" />
-//       <div className="hidden md:flex gap-5 max-md:flex-wrap">
-//         <div className="hover:text-violet-500 cursor-pointer">
-//           <Link to={"/"}>Home</Link>
-//         </div>
-//         <div className="hover:text-violet-500 cursor-pointer">
-//           <Link to={"/token"}>Tokens</Link>
-//         </div>
-//         <div className="hover:text-violet-500 cursor-pointer">
-//           <Link to={"/pricing"}>Pricing</Link>
-//         </div>
-//         <div className="hover:text-violet-500 cursor-pointer">Contact Us</div>
-//       </div>
-//       <Link to={"/signup"}>
-//         <button className="hidden md:flex justify-center  px-8 py-4 mt-9 bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
-//           Get Started
-//         </button>
-//       </Link>
-//     </div>
-//   );
-// }
-
-// export default Header;
