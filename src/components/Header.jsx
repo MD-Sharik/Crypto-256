@@ -56,7 +56,7 @@ function Header() {
             transition: "background-color 0.3s ease",
           }}
         >
-          <img src="public\256 Crypto\LOGO.svg" />
+          <img src="/256 Crypto/LOGO.svg" />
           <div className="hidden md:flex gap-5 max-md:flex-wrap">
             <div className="hover:text-violet-500 cursor-pointer">
               <Link to={"/"}>Home</Link>
