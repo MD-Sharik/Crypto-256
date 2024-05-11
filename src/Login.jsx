@@ -114,7 +114,7 @@ function Login() {
                   Log in
                 </button>
                 <p className="text-sm font-light text-slate-100 ">
-                  Dont have an accoutn?{" "}
+                  Dont have any account?{" "}
                   <Link
                     to={"/signup"}
                     className="font-medium text-primary-600 hover:underline "

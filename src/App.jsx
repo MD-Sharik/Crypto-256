@@ -58,7 +58,7 @@ function App() {
           </div>
           <img
             width={756}
-            src="public\256 Crypto\HERO.png"
+            src="/256 Crypto/HERO.png"
             className="mt-20 max-md:mt-10 w-[80vw] md:w-[48rem]"
             data-aos="fade-up"
             data-aos-delay="700"
