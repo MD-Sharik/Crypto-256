@@ -77,7 +77,7 @@ function Header() {
           </div>
           <div className="flex  w-48">
             <Link to={"/Login"}>
-              <button className="hidden md:flex justify-center px-8 py-4 bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
+              <button className="hidden md:flex justify-center px-8 py-4 bg-transparent hover:bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
                 Login
               </button>
             </Link>

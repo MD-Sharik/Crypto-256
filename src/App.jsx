@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,8 +9,38 @@ function App() {
   useEffect(() => {
     Aos.init();
   }, []);
+
+  const [truee, setTruee] = useState(false);
+  const videoHandle = () => {
+    setTruee(!truee);
+  };
+
   return (
     <div className="bg-black pb-10">
+      {truee && (
+        <div className="fixed h-screen w-screen bg-black/95 backdrop-blur-md z-50 flex justify-center items-center ">
+          <img
+            className="absolute top-[5rem] right-[5rem] cursor-pointer hover:shadow-xl "
+            width="60"
+            height="60"
+            onClick={videoHandle}
+            src="https://img.icons8.com/ios-glyphs/60/3E10C0/multiply.png"
+            alt="multiply"
+          />
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/XMnghGaSH4Y?si=05hzbQ9fEuMobXfR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      )}
       {/* BLOCK 1 */}
       <div id="d1">
         {/* CONTENT */}
@@ -48,7 +78,10 @@ function App() {
                   Get Started
                 </div>
               </Link>
-              <div className="flex gap-4 text-lg leading-7 text-white">
+              <div
+                className="flex gap-4 text-lg leading-7 text-white"
+                onClick={videoHandle}
+              >
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aef9ec0843a7aa36857b1076a205f934871d3cc3922d2b3dc7ac02f32a1b655?"
@@ -66,13 +99,9 @@ function App() {
             data-aos-delay="700"
             data-aos-offset="-500"
           />
-          <div className="logos flex justify-start overflow-x-hidden w-full">
-            <div className="logo_items flex">
-              <img className="aspect-auto scale-50" src="" />
-              <img className="aspect-auto scale-50" src="" />
-              <img className="aspect-auto scale-50" src="" />
-              <img className="aspect-auto scale-50" src="" />
-              <img className="aspect-auto scale-50" src="" />
+          <div className="logos bg-black/50 flex justify-start overflow-x-hidden w-full">
+            <div className="logo_items flex justify-center mx-auto py-2">
+              <img src="/256 Crypto/Banner 2.png" />
             </div>
           </div>
         </div>
@@ -104,8 +133,9 @@ function App() {
                     <br />
                     using different payment methods.
                   </div>
+
                   <div className="justify-center self-start px-10 py-6 mt-7 text-base leading-4 bg-black border border-violet-700 border-solid rounded-[30px] max-md:px-5">
-                    Get Started
+                    <Link to={"/signup"}> Get Started</Link>
                   </div>
                 </div>
               </div>
@@ -272,9 +302,11 @@ function App() {
                 <br />
                 optimize collaborative benefits
               </div>
-              <button className="justify-center self-start px-10 m-auto md:ml-0 py-6 mt-9 text-base leading-4 text-violet-700 bg-black border border-violet-700 border-solid rounded-[30px] max-md:px-5">
-                Get Started
-              </button>
+              <Link to={"/signup"}>
+                <button className="justify-center self-start px-10 m-auto md:ml-0 py-6 mt-9 text-base leading-4 text-violet-700 bg-black border border-violet-700 border-solid rounded-[30px] max-md:px-5">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
           <div
@@ -289,14 +321,6 @@ function App() {
       </div>
 
       <div className="flex flex-col items-center">
-        {/* <div className="text-white text-4xl font-bold mb-8">
-          Affordable Pricing
-        </div>
-        <div className="max-w-[40ch] text-white text-center mb-20">
-          A full-stack crypto services platform that works with crypto-native
-          businesses and institutional clients on lending and trading solutions
-          tailored to your needs
-        </div> */}
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
