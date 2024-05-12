@@ -36,7 +36,10 @@ function Header() {
             </Link>
           </div>
           <div className="text-white">Dashboard</div>
-          <div>
+          <div className="flex gap-4 items-center">
+            <span className="text-white font-semibold">
+              {localStorage.getItem("username").toUpperCase()}
+            </span>
             <img
               width="30"
               height="30"
@@ -49,15 +52,19 @@ function Header() {
     } else {
       return (
         <div
-          className={`flex gap-5 w-full px-20 fixed z-50 justify-between backdrop-blur-sm items-center max-w-full text-white max-md:flex-wrap ${
+          className={`flex gap-5 w-full fixed z-50 justify-between backdrop-blur-sm items-center max-w-full text-white max-md:flex-wrap ${
             scrolled ? "bg-black/95" : ""
           }`}
           style={{
             transition: "background-color 0.3s ease",
           }}
         >
-          <img src="/256 Crypto/LOGO.svg" />
-          <div className="hidden md:flex gap-5 max-md:flex-wrap">
+          <div className="w-48 flex justify-center ">
+            <Link to="/">
+              <img src="/256 Crypto/LOGO.svg" />
+            </Link>
+          </div>
+          <div className="hidden  md:flex gap-5 max-md:flex-wrap">
             <div className="hover:text-violet-500 cursor-pointer">
               <Link to={"/"}>Home</Link>
             </div>
@@ -67,19 +74,11 @@ function Header() {
             <div className="hover:text-violet-500 cursor-pointer">
               <Link to={"/pricing"}>Pricing</Link>
             </div>
-            <div className="hover:text-violet-500 cursor-pointer">
-              Contact Us
-            </div>
           </div>
-          <div className="flex  gap-5">
-            <Link to={"/login"}>
-              <button className="hidden md:flex justify-center px-8 py-4 bg-transparent border border-transparent border-solid transition-all hover:border-white hover:bg-white/5 cursor-pointer rounded-[30px] max-md:px-5">
-                Login
-              </button>
-            </Link>
-            <Link to={"/signup"}>
+          <div className="flex  w-48">
+            <Link to={"/Login"}>
               <button className="hidden md:flex justify-center px-8 py-4 bg-black border border-white border-solid transition-all hover:border-violet-800 hover:text-violet-500 cursor-pointer rounded-[30px] max-md:px-5">
-                Get Started
+                Login
               </button>
             </Link>
           </div>

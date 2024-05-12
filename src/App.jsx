@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Price from "./components/Price";
 import Member from "./components/Member";
+import { Link } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -43,9 +43,11 @@ function App() {
             className="flex gap-5  m-auto justify-between items-start mt-16 max-w-full max-md:flex-wrap max-md:mt-10"
           >
             <div className="flex gap-5 justify-between mt-1">
-              <div className="justify-center px-10 py-6 text-base leading-4 text-black bg-violet-300 border border-violet-700 border-solid rounded-[30px] max-md:px-5">
-                Get Started
-              </div>
+              <Link to={"/signup"}>
+                <div className="justify-center hover:bg-violet-500 font-medium transition-all px-10 py-6 text-base leading-4 text-black bg-violet-300 border border-violet-700 border-solid rounded-[30px] max-md:px-5">
+                  Get Started
+                </div>
+              </Link>
               <div className="flex gap-4 text-lg leading-7 text-white">
                 <img
                   loading="lazy"
@@ -64,27 +66,13 @@ function App() {
             data-aos-delay="700"
             data-aos-offset="-500"
           />
-          <div className="logos flex justify-start w-full">
+          <div className="logos flex justify-start overflow-x-hidden w-full">
             <div className="logo_items flex">
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            </div>
-            <div className="logo_items flex">
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            </div>
-            <div className="logo_items flex">
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-              <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+              <img className="aspect-auto scale-50" src="" />
+              <img className="aspect-auto scale-50" src="" />
+              <img className="aspect-auto scale-50" src="" />
+              <img className="aspect-auto scale-50" src="" />
+              <img className="aspect-auto scale-50" src="" />
             </div>
           </div>
         </div>
@@ -245,8 +233,22 @@ function App() {
             empowering builders to bring the most innovative products to the
             world.
           </div>
-          <Member />
-          <Member />
+          <Member
+            img={"/256 Crypto/p1.jpg"}
+            img2={"/256 Crypto/p2.jpg"}
+            img3={"/256 Crypto/p3.jpg"}
+            nm1={"Hannah Fox"}
+            nm2={"Dev Patel"}
+            nm3={"Britney Heth"}
+          />
+          <Member
+            img={"/256 Crypto/p4.jpg"}
+            img2={"/256 Crypto/p5.jpg"}
+            img3={"/256 Crypto/p6.jpg"}
+            nm1={"Billy Josh"}
+            nm2={"Hardeep Singh"}
+            nm3={"Tom Hanks"}
+          />
         </div>
       </div>
       <div className="mt-24 w-[80vw] lg:w-[60vw] m-auto  max-md:mt-10 mb-48 ">
@@ -285,11 +287,387 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Price */}
-      <div className=" p-14 w-full flex gap-10 justify-center">
-        <Price price={"FREE"} />
-        <Price price={"$20.00"} />
-        <Price price={"$50.00"} />
+
+      <div className="flex flex-col items-center">
+        {/* <div className="text-white text-4xl font-bold mb-8">
+          Affordable Pricing
+        </div>
+        <div className="max-w-[40ch] text-white text-center mb-20">
+          A full-stack crypto services platform that works with crypto-native
+          businesses and institutional clients on lending and trading solutions
+          tailored to your needs
+        </div> */}
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          className="text-xl font-semibold leading-6 text-center text-violet-700"
+        >
+          OUR PRICING
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          className="mt-8 text-5xl font-semibold text-center text-white leading-[53px]"
+        >
+          Affordable Pricing
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          className="mt-9 mb-8 text-lg leading-7 text-center text-white max-md:max-w-full"
+        >
+          A full-stack crypto services platform that works with crypto-native
+          businesses <br /> and institutional clients on lending and trading
+          solutions tailored to your needs
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row justify-center mx-auto max-w-[60rem] gap-6 ">
+        {/* <!-- Pricing Card --> */}
+        <div
+          id="d2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="200"
+          className="flex flex-col p-6  mx-auto lg:mx-0 shadow-violet-500/30 max-w-[28rem] text-center text-white bg-black/40 rounded-3xl border border-violet-500 shadow-md "
+        >
+          <h3 className="mb-4 text-2xl text-violet-200 font-semibold">
+            Starter
+          </h3>
+          <p className="font-light text-violet-400 sm:text-lg ">
+            Best option for personal use & for your next project.
+          </p>
+          <div className="flex justify-center items-baseline my-8">
+            <span className="mr-2 text-5xl   font-extrabold">FREE</span>
+            <span className="   ">/Forever</span>
+          </div>
+          {/* <!-- List --> */}
+          <ul role="list" className="mb-8 space-y-4 text-left">
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-gg text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Team size: <span className="font-semibold ">1 developer</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-gg  "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Premium support: <span className="font-semibold">6 months</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-gg  "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Free updates: <span className="font-semibold">6 months</span>
+              </span>
+            </li>
+          </ul>
+          <Link
+            to="/signup"
+            className="text-black bg-violet-800 hover:bg-violet-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+          >
+            Get started
+          </Link>
+        </div>
+        {/* <!-- Pricing Card --> */}
+        <div
+          id="d2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="250"
+          className="flex flex-col p-6 mx-auto lg:mx-0 shadow-violet-500/30  max-w-[28rem] text-center text-white bg-black/60 shadow-md rounded-3xl border border-violet-500  "
+        >
+          <h3 className="mb-4 text-2xl text-violet-200 font-semibold">
+            Company
+          </h3>
+          <p className="font-light text-violet-400 sm:text-lg ">
+            Relevant for multiple users, extended & premium support.
+          </p>
+          <div className="flex justify-center items-baseline my-8">
+            <span className="mr-2 text-5xl font-extrabold">$99</span>
+            <span className="text-white ">/month</span>
+          </div>
+          {/* <!-- List --> */}
+          <ul role="list" className="mb-8 space-y-4 text-left">
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Team size: <span className="font-semibold">10 developers</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5  "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Premium support:{" "}
+                <span className="font-semibold">24 months</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5  "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Free updates: <span className="font-semibold">24 months</span>
+              </span>
+            </li>
+          </ul>
+          <Link
+            to="/signup"
+            className="text-black bg-violet-800 hover:bg-violet-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+          >
+            Get started
+          </Link>
+        </div>
+        {/* <!-- Pricing Card --> */}
+        <div
+          id="d2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="300"
+          className="flex flex-col p-6 mx-auto lg:mx-0 shadow-violet-500/30  max-w-[28rem] text-center text-white bg-black/40 rounded-3xl border border-violet-500 shadow-md "
+        >
+          <h3 className="mb-4 text-2xl font-semibold text-violet-200">
+            Enterprise
+          </h3>
+          <p className="font-light  text-violet-400 sm:text-lg ">
+            Best for large scale uses and extended redistribution rights.
+          </p>
+          <div className="flex justify-center items-baseline my-8">
+            <span className="mr-2 text-5xl font-extrabold">$199</span>
+            <span className=" ">/month</span>
+          </div>
+          {/* <!-- List --> */}
+          <ul role="list" className="mb-8 space-y-4 text-left">
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>Individual configuration</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>No setup, or hidden fees</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Team size:{" "}
+                <span className="font-semibold">100+ developers</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Premium support:{" "}
+                <span className="font-semibold">36 months</span>
+              </span>
+            </li>
+            <li className="flex items-center space-x-3">
+              {/* <!-- Icon --> */}
+              <svg
+                className="flex-shrink-0 w-5 h-5 text-green-500 "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span>
+                Free updates: <span className="font-semibold">36 months</span>
+              </span>
+            </li>
+          </ul>
+          <Link
+            to="/signup"
+            className="text-black bg-violet-800 hover:bg-violet-700 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+          >
+            Get started
+          </Link>
+        </div>
       </div>
     </div>
   );
