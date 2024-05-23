@@ -49,7 +49,7 @@ function App() {
             <div
               data-aos="fade-up"
               data-aos-delay="200"
-              className="flex-auto mt-5 max-md:max-w-full max-md:text-4xl max-md:leading-[58px]"
+              className="flex-auto mt-20 md:mt-5 max-md:max-w-full max-md:text-4xl max-md:leading-[58px]"
             >
               Trusted platform
               <br />
@@ -338,15 +338,15 @@ function App() {
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
-          className="mt-9 mb-8 text-lg leading-7 text-center text-white max-md:max-w-full"
+          className="my-8 text-lg leading-7 text-center text-white md:w-[60ch] sm:w-[40ch] w-[80vw]"
         >
           A full-stack crypto services platform that works with crypto-native
-          businesses <br /> and institutional clients on lending and trading
-          solutions tailored to your needs
+          businesses and institutional clients on lending and trading solutions
+          tailored to your needs
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center mx-auto max-w-[60rem] gap-6 ">
+      <div className="flex flex-col px-4 sm:px-0 lg:flex-row justify-center mx-auto max-w-[60rem] gap-6 ">
         {/* <!-- Pricing Card --> */}
         <div
           id="d2"

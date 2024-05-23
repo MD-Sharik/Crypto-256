@@ -10,8 +10,11 @@ function Dashboard() {
     <div className="h-screen bg-black">
       <div id="d1" className="h-screen">
         <div className="flex p-5 justify-between">
-          <div className="w-[30%] bg-black/30 shadow-3xl backdrop-blur-sm h-[95vh] rounded-xl">
-            g
+          <div className="w-[30%] flex justify-center items-center bg-black/30 shadow-3xl backdrop-blur-sm h-[95vh] rounded-xl">
+            <div className="min-w-[30rem] h-[50rem] bg-zinc-700">
+              <div>{localStorage.getItem("")}</div>
+              <div>Available Amount</div>
+            </div>
           </div>
           <div className="w-[69%] h-[95vh] rounded-xl flex flex-col justify-between">
             <div className="h-[48.8%] rounded-xl bg-black/30 shadow-3xl backdrop-blur-sm">

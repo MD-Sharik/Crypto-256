@@ -53,7 +53,7 @@ function Signup() {
   return (
     <div className="bg-black">
       <div className="h-screen flex justify-center items-center" id="d1">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div className="flex flex-col items-center mt-16 justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full backdrop-blur-sm bg-white/10 rounded-lg shadow-2xl  md:mt-0 sm:max-w-md xl:p-0 ">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-slate-100 md:text-2xl ">

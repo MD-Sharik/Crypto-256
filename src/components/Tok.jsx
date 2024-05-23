@@ -58,7 +58,7 @@ function tok() {
                 Bitcoin is an innovative payment system and a new kind of money.
               </td>
               <td className="px-6 py-4 font-bold">$ 233,544,092,111 USD</td>
-              <td className="px-6 py-4 font-bold  hidden md:block">
+              <td className="px-6 py-4 font-bold hidden md:flex md:mt-4 ">
                 $ 27,556,341,001 USD
               </td>
             </tr>
@@ -76,7 +76,7 @@ function tok() {
                 applications.
               </td>
               <td className="px-6 py-4 font-bold ">$ 78,145,725,085 USD</td>
-              <td className="px-6 py-4 font-bold hidden md:block">
+              <td className="px-6 py-4 font-bold hidden md:mt-10 md:block">
                 $ 2,123,854,075USD
               </td>
             </tr>
@@ -93,7 +93,7 @@ function tok() {
                 easily as other digital currencies.
               </td>
               <td className="px-6 py-4  font-bold">$ 72,492,161,421 USD</td>
-              <td className="px-6 py-4  font-bold hidden md:block">
+              <td className="px-6 py-4  font-bold hidden md:mt-4 md:block">
                 $ 51,116,487,015 USD
               </td>
             </tr>
@@ -110,7 +110,7 @@ function tok() {
                 Polkadot's vision of cross-chain interoperability starts here.
               </td>
               <td className="px-6 py-4  font-bold">$ 10,077,446,351 USD</td>
-              <td className="px-6 py-4  font-bold hidden md:block">
+              <td className="px-6 py-4  font-bold hidden md:mt-10 md:block">
                 $ 681,300,745 USD
               </td>
             </tr>
